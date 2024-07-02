@@ -1,6 +1,7 @@
 #!/bin/bash
 
 Validate(){
+    
     if [ $1 -ne 0 ]
     then
        echo " Failed in $2"
@@ -11,7 +12,7 @@ Validate(){
 
 ID=$(id -u)
 
-if [ $ID -ne 0]
+if [ $ID -ne 0 ]
 then
    echo " Run the script with root access"
    exit 1
