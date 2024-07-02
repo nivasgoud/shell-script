@@ -12,6 +12,7 @@ Validate(){
        exit 1
     else
        echo "Success in $2"
+    fi
 }
 
 if [ $ID -ne 0 ]
