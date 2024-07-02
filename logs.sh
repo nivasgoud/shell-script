@@ -2,25 +2,29 @@
 ID=$(id -u)
 TimeStamp=$(date +%F#%H::%M::%S)
 LogFile="/tmp/Shell-$0-$TimeStamp.log"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 echo " Script started executing at $TimeStamp" &>> $LogFile
 
 Validate(){
     if [ $1 -ne 0 ]
     then
-       echo " Failed in $2 "
+       echo -e "$R Failed in $2 $N"
        exit 1
     else
-       echo "Success in $2"
+       echo -e "$G Success in $2 $N"
     fi
 }
 
 if [ $ID -ne 0 ]
 then
-   echo "Run the script with root access"
+   echo -e "$R Run the script with root access $N"
    exit 1
 else
-   echo "You have root privelages"
+   echo -e "$Y You have root privelages $N"
 fi
 
 yum install mysql -y &>> $LogFile
