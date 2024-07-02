@@ -11,10 +11,10 @@ N="\e[0m"
 Validate(){
     if [ $1 -ne 0 ]
     then
-       echo "$R Failed in $2 $N"
+       echo -e "$R Failed in $2 $N"
        exit 1
     else
-       echo "$G Success in $2 $N"
+       echo -e "$G Success in $2 $N"
     fi
 }
 
@@ -35,6 +35,6 @@ do
       Validate $? "Installing $i"
       exit 1
   else
-      echo " $i package is already installed...$Y SKIPPING $N"
+      echo -e " $i package is already installed...$Y SKIPPING $N"
   fi
 done
