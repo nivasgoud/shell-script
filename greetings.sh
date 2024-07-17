@@ -19,6 +19,7 @@ do
       
       n) NAME="$OPTARG";;
       w) WISHES="$OPTARG";;
+      :) USAGE; exit;;
       h) USAGE; exit;;
       
   esac
