@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NAME=$1
-WISHES=$2
+NAME=""
+WISHES=""
 
 
 USAGE(){
@@ -19,6 +19,7 @@ do
       
       n) NAME="$OPTARG";;
       w) WISHES="$OPTARG";;
+      \?) echo "invalid options: - "$OPTARG" " >&2; USAGE; exit;;
       :) USAGE; exit;;
       h) USAGE; exit;;
       
