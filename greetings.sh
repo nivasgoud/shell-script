@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME=""
-WISHES=""
+WISHES="Good Morning"
 
 
 USAGE(){
@@ -26,11 +26,14 @@ do
   esac
 done
 
-if [ -z $NAME ] || [ -z $WISHES ]
+#if [ -z $NAME ] || [ -z $WISHES ]
+
+if [ -z $NAME ]
 
 then
 
-    echo "Both -n and -w are mandatory options"
+    #echo "Both -n and -w are mandatory options"
+    echo " ERROR: -n is mandatory"
     
     USAGE
 
